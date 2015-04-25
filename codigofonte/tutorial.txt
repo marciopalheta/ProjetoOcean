@@ -1,0 +1,30 @@
+$ git clone git@github.com:marciopalheta/buriapp.git
+$ cd buriapp
+$ git branch 
+$ git remote add "buritech" git@github.com:buritech/buriapp.git
+$ git fetch buritech
+$ git checkout -b pbi.01.04
+$ git merge buritech/pbi.01.04
+
+$ git merge buritech/pbi.01.04
+$ git mergetool 
+
+http://www.perforce.com/downloads/20-User?qt-perforce_downloads_step_3=1#product-10
+
+#Mergetool for mac
+[merge]
+        keepBackup = false
+        tool = p4merge
+        
+[mergetool "p4merge"]
+        cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$LOCAL" "$PWD/$MERGED"
+        keepTemporaries = false
+        trustExitCode = false
+        keepBackup = false
+
+#Mergetool for windows
+[merge]
+	tool = p4merge
+[mergetool "p4merge"]
+	cmd = p4merge.exe \"\" \"\" \"\" \"\"
+	path = C:\\Program Files\\Perforce\\p4merge.exe
